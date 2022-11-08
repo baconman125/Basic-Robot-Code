@@ -19,6 +19,9 @@ public class Constants {
     public static final int rearRighttMotorPort = 2;
     public static final int rearLeftMotorPort = 3;
     public static final int frontLeftMotorPort = 4;
+    public static final int climberArmMotorPort = 6;
+    
+  
 
     // Joystick Port Numbers
     public static final int primaryJoystickPort = 0;
@@ -28,4 +31,6 @@ public class Constants {
     // button numbers for primary joystick (1-9)
     public static final int printWhenPressedButtonNumber = 1;
     public static final int resetGyroButtonNumber = 8;
+    //digital input port
+    public static final int angleSwitchPort = 4;
 }
