@@ -7,8 +7,8 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 public class Instructions extends SubsystemBase {
-    public final CANSparkMax c;
-    public final DigitalInput digitalSwitch;
+    private final CANSparkMax c;
+    private final DigitalInput digitalSwitch;
     private final RelativeEncoder encoder;
     
     public Instructions(){
