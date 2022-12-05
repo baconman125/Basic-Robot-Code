@@ -13,7 +13,7 @@ public class Instructions extends SubsystemBase {
     
     public Instructions(){
        this.c = new CANSparkMax(Constants.climberArmMotorPort, MotorType.kBrushless);
-       encoder = c.getEncoder();
+       this.encoder = c.getEncoder();
        this.digitalSwitch = new DigitalInput(Constants.angleSwitchPort);
 
        
