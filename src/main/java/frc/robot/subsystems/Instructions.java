@@ -9,14 +9,18 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 public class Instructions extends SubsystemBase {
     public final CANSparkMax c;
     public final DigitalInput digitalSwitch;
+    private final RelativeEncoder encoder;
     
     public Instructions(){
        this.c = new CANSparkMax(Constants.climberArmMotorPort, MotorType.kBrushless);
+       encoder = c.getEncoder();
        this.digitalSwitch = new DigitalInput(Constants.angleSwitchPort);
+
+       
     }
     public void resetEncoder(){
-         
-  }
+      setEncoder(0);
+    }
     public void setArmSpeed(double input)
     {
       c.set(input);
@@ -25,6 +29,12 @@ public class Instructions extends SubsystemBase {
     public boolean switchIsPressed(){
       return(digitalSwitch.get());
     }
+    public void setEncoder(double val){
+      encoder.setPosition(val);
+    }
+    public double getEncoderPosition(){
+      return encoder.getPosition();
+      }
 
 
 }
