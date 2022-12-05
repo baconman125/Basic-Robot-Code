@@ -12,6 +12,7 @@ public class Instructions extends SubsystemBase {
     private final RelativeEncoder encoder;
     
     public Instructions(){
+       //6 4
        this.c = new CANSparkMax(Constants.climberArmMotorPort, MotorType.kBrushless);
        this.encoder = c.getEncoder();
        this.digitalSwitch = new DigitalInput(Constants.angleSwitchPort);
